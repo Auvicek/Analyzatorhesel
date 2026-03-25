@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Smarter Password Analyzer</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="app-container">
+	<div class="card">
+		<h1>Analyzátor hesla</h1>
+		<p class="subtitle">Zjistěte, jak odolné je vaše tajemství.</p>
+
+		<div class="input-group">
+			<label for="password-input"></label><input type="password" id="password-input" placeholder="Zadejte heslo..." autocomplete="off">
+			<button id="toggle-pwd" type="button">👁️</button>
+		</div>
+
+		<div class="metrics">
+			<div class="metric-item">
+				<span class="label">Síla hesla</span>
+				<span id="status-text" class="value">Čekám...</span>
+			</div>
+
+			<div class="strength-meter">
+				<div id="strength-bar" class="bar"></div>
+			</div>
+
+			<div class="details-grid">
+				<div class="detail-card">
+					<span class="detail-label">Entropie</span>
+					<span id="entropy-val" class="detail-value">0 bits</span>
+				</div>
+				<div class="detail-card">
+					<span class="detail-label">Čas k prolomení</span>
+					<span id="crack-time" class="detail-value">Okamžitě</span>
+				</div>
+			</div>
+		</div>
+
+		<button id="generate-btn" class="primary-btn">Generovat silné heslo</button>
+	</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
