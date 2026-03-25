@@ -77,7 +77,7 @@ btnToggle.addEventListener("click", () => {
 generovatheslo.addEventListener("click", () => {
     const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()><";
     let pwd = "";
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 30; i++) {
         pwd += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     vstup.value = pwd;
